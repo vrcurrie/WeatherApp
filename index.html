@@ -16,15 +16,34 @@
     <title>Weather</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container intro">
       <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-12">
                 <img class="picture" src="images/weather.png" alt="SheCodesWeather" />
               </div>
-              <h1>User Location</h1> <h1 id="city"></h1>
-              <h3>Day & Time</h3>
-              <h3 id="date"></h3>
+              <h1 id="city"></h1>
+              <ul>
+                <li>Last updated: <span id="date">Thursday 13:15</span></li>
+                <li id="description">overcast clouds</li>
+            </ul>
         </div>
+        <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"> °C</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+              </ul>
+            </div>
+          </div>
       </div>
       <div class="container">
         <form class="search-form" id="search-form">
@@ -36,101 +55,28 @@
                 autofocus="on"
                 autocomplete="off"
                 id="city-input"
+                class="form-control"
                 
               />
               </div>
               <div class="col-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">🔎 &nbsp; Search</button>
               </div>
               <div class="col-3">
-                <button class="btn btn-success" id="current-location-button">Current</button>
+                <button class="btn btn-success" id="current-location-button">📍 &nbsp; Current Location</button>
               </div> 
               
                </form>
-      <div class="row">
-        <div class="col-sm-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Monday</h5>
-              <p class="card-text">                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span></p>
-              <a href="#" class="btn btn-primary">More Details</a>
-            </div>
-          </div>
+       <div class="weather-forecast" id="forecast"></div>
+
+        <div class="credit"> 
+           <a href="https://github.com/vrcurrie/WeatherApp" target="_blank">https://github.com/vrcurrie/WeatherApp</a>
         </div>
-        <div class="col-sm-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tuesday</h5>
-              <p class="card-text">                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span></p>
-              <a href="#" class="btn btn-primary">More Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Wednesday</h5>
-              <p class="card-text">                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span></p>
-              <a href="#" class="btn btn-primary">More Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Thursday</h5>
-              <p class="card-text">                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span></p>
-              <a href="#" class="btn btn-primary">More Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Friday</h5>
-              <p class="card-text">                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span></p>
-              <a href="#" class="btn btn-primary">More Details</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Saturday</h5>
-              <p class="card-text">                <span class="temperature" id="temperature"></span
-                ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span></p>
-              <a href="#" class="btn btn-primary">More Details</a>
-            </div>
-          </div>
-        </div>
-      </div>
+        
+      
     </div>
 
-      </div> 
-      <p>https://github.com/vrcurrie/WeatherApp</p>
+     
     <script src="src/script.js"></script>
   </body>
 </html>
