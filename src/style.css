@@ -67,6 +67,13 @@ li {
 .weather-forecast {
   margin-top: 10px;
 }
+.weather-forecast-temperatures {
+  text-align: center;
+}
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
 .weather-forecast-temperature-min {
   opacity: 0.5;
 }
